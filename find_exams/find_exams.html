@@ -1,0 +1,52 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module find_exams</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>find_exams</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/ug/morrism/Documents/ltB/find_exams/find_exams.py">/home/ug/morrism/Documents/ltB/find_exams/find_exams.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-getCourse"><strong>getCourse</strong></a>(line)</dt><dd><tt>This&nbsp;function&nbsp;takes&nbsp;in&nbsp;a&nbsp;row&nbsp;from&nbsp;a&nbsp;.csv&nbsp;file&nbsp;and&nbsp;returns&nbsp;the&nbsp;course<br>
+&nbsp;<br>
+:param&nbsp;line:&nbsp;This&nbsp;is&nbsp;the&nbsp;row&nbsp;for&nbsp;which&nbsp;the&nbsp;course&nbsp;must&nbsp;be&nbsp;found<br>
+:return&nbsp;l_name,&nbsp;c_name:&nbsp;returns&nbsp;the&nbsp;lecturer's&nbsp;name&nbsp;as&nbsp;well&nbsp;as&nbsp;the&nbsp;course&nbsp;name</tt></dd></dl>
+ <dl><dt><a name="-getCoursesForLects"><strong>getCoursesForLects</strong></a>(lectsfn)</dt><dd><tt>This&nbsp;function&nbsp;groups&nbsp;related&nbsp;courses&nbsp;to&nbsp;lecturers<br>
+&nbsp;<br>
+:param&nbsp;lectsfn:&nbsp;This&nbsp;is&nbsp;the&nbsp;file&nbsp;which&nbsp;contains&nbsp;lecturers&nbsp;and&nbsp;courses<br>
+:return&nbsp;courses:&nbsp;returns&nbsp;a&nbsp;dictionary&nbsp;which&nbsp;contains&nbsp;a&nbsp;list&nbsp;of&nbsp;courses&nbsp;for&nbsp;each&nbsp;lecturer</tt></dd></dl>
+ <dl><dt><a name="-getExams"><strong>getExams</strong></a>(examfname)</dt><dd><tt>This&nbsp;function&nbsp;takes&nbsp;a&nbsp;file&nbsp;containing&nbsp;exam&nbsp;data&nbsp;and&nbsp;returns&nbsp;the&nbsp;exams&nbsp;in&nbsp;a&nbsp;list<br>
+&nbsp;<br>
+:param&nbsp;examfname:&nbsp;This&nbsp;is&nbsp;the&nbsp;file&nbsp;which&nbsp;contains&nbsp;the&nbsp;exam&nbsp;data<br>
+:return&nbsp;exams:&nbsp;This&nbsp;is&nbsp;a&nbsp;dictionary&nbsp;containing&nbsp;the&nbsp;exams&nbsp;time&nbsp;and&nbsp;location</tt></dd></dl>
+ <dl><dt><a name="-getTimeTable"><strong>getTimeTable</strong></a>(courses, exams)</dt><dd><tt>This&nbsp;function&nbsp;takes&nbsp;in&nbsp;courses&nbsp;and&nbsp;exam&nbsp;data,&nbsp;and&nbsp;returns&nbsp;a&nbsp;timetable<br>
+&nbsp;<br>
+:param&nbsp;courses:&nbsp;This&nbsp;is&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;lecturers&nbsp;and&nbsp;their&nbsp;courses<br>
+:para&nbsp;exams:&nbsp;This&nbsp;is&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;exams&nbsp;containing&nbsp;their&nbsp;time&nbsp;and&nbsp;location<br>
+:return&nbsp;ttable:&nbsp;This&nbsp;is&nbsp;a&nbsp;list&nbsp;containing&nbsp;lectueres&nbsp;and&nbsp;their&nbsp;exam&nbsp;times&nbsp;for&nbsp;the&nbsp;courses</tt></dd></dl>
+ <dl><dt><a name="-showTimeTable"><strong>showTimeTable</strong></a>(ttable)</dt><dd><tt>This&nbsp;function&nbsp;displays&nbsp;a&nbsp;timetable&nbsp;using&nbsp;print()<br>
+&nbsp;<br>
+:param&nbsp;ttable:&nbsp;this&nbsp;is&nbsp;a&nbsp;list&nbsp;of&nbsp;lecturers&nbsp;and&nbsp;their&nbsp;exam&nbsp;times&nbsp;for&nbsp;courses<br>
+:return:&nbsp;returns&nbsp;nothing</tt></dd></dl>
+</td></tr></table>
+</body></html>

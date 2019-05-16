@@ -5,10 +5,21 @@ import re
 
 
 def getCourse(line):
+    """ This function takes in a row from a .csv file and returns the course
+
+    :param line: This is the row for which the course must be found
+    :return l_name, c_name: returns the lecturer's name as well as the course name
+    """
     l_name, c_name = line.rstrip().split(",")    ##EE1
     return c_name, l_name   #EE2
 
 def getCoursesForLects(lectsfn):
+    ''' 
+    This function groups related courses to lecturers
+
+    :param lectsfn: This is the file which contains lecturers and courses
+    :return courses: returns a dictionary which contains a list of courses for each lecturer
+    '''
     courses = {}  # dictionary: for each lect returns list of courses
     lf = open(lectsfn)
     for line in lf:
@@ -21,6 +32,12 @@ def getCoursesForLects(lectsfn):
     return courses
 
 def getExams(examfname):
+    '''
+    This function takes a file containing exam data and returns the exams in a list
+
+    :param examfname: This is the file which contains the exam data
+    :return exams: This is a dictionary containing the exams time and location
+    '''
     exams = {}
     for line in open(examfname):
         data = line.rstrip().split(",")
@@ -28,6 +45,13 @@ def getExams(examfname):
     return exams
 
 def getTimeTable(courses,exams):
+    '''
+    This function takes in courses and exam data, and returns a timetable
+
+    :param courses: This is a dictionary of lecturers and their courses
+    :para exams: This is a dictionary of exams containing their time and location
+    :return ttable: This is a list containing lectueres and their exam times for the courses
+    '''
     ttable = []  # nested list -- for each lect a list of exams
     for lect in sorted(courses.keys()):
         l_exams   = [] # build list of lecturer's exams
@@ -42,6 +66,12 @@ def getTimeTable(courses,exams):
     return ttable
 
 def showTimeTable(ttable):
+    """
+    This function displays a timetable using print()
+
+    :param ttable: this is a list of lecturers and their exam times for courses
+    :return: returns nothing
+    """
     for (lect, l_exams) in ttable:
         print(lect)
         for c,ex in l_exams:
