@@ -10,8 +10,8 @@ def getCourse(line):
     :param line: This is the row for which the course must be found
     :return l_name, c_name: returns the lecturer's name as well as the course name
     """
-    l_name, c_name = line.rstrip().split(",")    ##EE1
-    return c_name, l_name   #EE2
+    l_name, c_name = line.rstrip().split("/")    ##EE1
+    return l_name, c_name   #EE2
 
 def getCoursesForLects(lectsfn):
     ''' 
@@ -25,7 +25,7 @@ def getCoursesForLects(lectsfn):
     for line in lf:
         lect, course = getCourse(line)
         if lect in courses: # is the lecturer in the dictionary
-            courses[lect].append(lect)  # add course to the list ##EE3
+            courses[lect].append(course)  # add course to the list ##EE3
         else:
             courses[lect] = [course]  
     lf.close()
@@ -39,9 +39,11 @@ def getExams(examfname):
     :return exams: This is a dictionary containing the exams time and location
     '''
     exams = {}
-    for line in open(examfname):
+    ef = open(examfname)
+    for line in ef:
         data = line.rstrip().split(",")
         exams[data[0]]=(data[1],data[2])
+    ef.close()
     return exams
 
 def getTimeTable(courses,exams):
